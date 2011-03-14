@@ -1,0 +1,19 @@
+// enum for defining the characteristics of different structures
+
+
+public enum StructureType {
+
+
+
+
+    private int width;
+    private int height;
+    private String name;
+    //--->health
+    //--->cost
+    //--->etc
+
+
+
+
+} //enum

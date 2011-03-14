@@ -20,8 +20,7 @@ public class TextOutput extends Output {
 	    System.out.println(" No available data.");
 	    System.out.println();
 	} else {
-	    // very simplified version: 
-	    System.out.println("  Location:  ("+data.getXCoord()+", "+data.getYCoord()+")");
+	    //---System.out.println("  Location:  ("+data.getXCoord()+", "+data.getYCoord()+")");
 	    System.out.println();
 	}
     } //update

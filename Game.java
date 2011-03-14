@@ -18,8 +18,8 @@ public class Game {
 
     public void addPlayer(Player _p) {
 	players.add(_p);
+	data.getRegion().placeCharacter(_p);
 	data.getAllCharacters().add(_p);
-	data.getRegion().placeCharacter(_p, 2, 2);
     } //addPlayer
 
 

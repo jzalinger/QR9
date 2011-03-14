@@ -1,0 +1,28 @@
+// top-level class for graphical output
+
+import javax.swing.*;
+
+
+public class GUI extends Output {
+
+
+    private Frame frame;
+
+
+    public GUI() {
+	super();
+	frame=new Frame();
+    } //constructor
+
+
+    public void update() {
+	frame.update();
+    } //update
+
+
+    public void badUpdate() {
+	frame.badUpdate();
+    } //badUpdate
+
+
+} //class

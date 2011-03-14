@@ -1,0 +1,20 @@
+// superclass for any kind of user interface
+
+
+public abstract class Output {
+
+    private Animator animator;
+
+
+    public Output() {
+	//*should get called from any subclass constructor
+	animator=new Animator(this);
+	(new Thread(animator)).start();
+	animator.resume();
+    } //constructor
+
+
+
+
+
+} //class

@@ -1,0 +1,24 @@
+// class/thread that manages server's interacions with a particular client
+
+import java.net.*;
+
+
+public class AccountExec implements Runnable {
+
+
+    private Socket socket;
+    private int id;
+    private PrintWriter out;
+
+
+    public AccountExec(Socket s,int id) {
+	socket=s;
+	this.id=id;
+	out=new PrintWriter(new OutputStreamWriter(s.getOutputStream()));
+    } //constructor
+
+
+
+
+
+} //class

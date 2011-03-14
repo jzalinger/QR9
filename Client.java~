@@ -20,7 +20,7 @@ public class Client implements Runnable {
 	    data=new ClientData();
 	    output=new GUI();
 
-	    socket=new Socket("192.168.1.6",2000);
+	    socket=new Socket("192.168.1.2",2000);
 	    out=new PrintStream(socket.getOutputStream());
 
 	    (new Thread(new Client())).start();

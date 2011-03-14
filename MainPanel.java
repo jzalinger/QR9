@@ -24,9 +24,9 @@ public class MainPanel extends JPanel {
 	canvas=new WCanvas(Math.max(w,h),Math.max(w,h));
 	add(canvas);
 	add(new Rectangle(w,2,Color.BLACK));
-	add(new Rectangle(1,50));
 	alertLabel=new JLabel("ini");
 	add(alertLabel);
+	add(new Rectangle(1,200));
 	canvas.setFocusable(true);
 	canvas.addKeyListener(listener);
 	setFocusable(false);

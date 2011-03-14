@@ -1,0 +1,41 @@
+// parametized random map gnerator
+//  *when run, output should be piped into map text file
+
+//  *for now, only does rocks and spawn point
+
+
+public class MapGen {
+
+
+    private int size; //all maps are square
+    private double rockFreq; // [0-1) range
+    private Random random;
+    //--->baddie difficulty
+    //--->resource frequency
+
+
+    public static void main(String[] args) {
+	if(args.length!=2 && args.length!=3) {
+	    System.err.println("USAGE: <size> <rock freq> <optional: seed>");
+	    System.exit(0);
+	}
+
+	size=Integer.parseInt(args[0]);
+	rockFreq=Double.parseDouble(args[1])%1;
+	long seed=Math.random()*100000;
+	if(args.length==3) seed=Long.parseLong(args[2]);
+	random=new Random(seed);
+
+	//print size,spawn
+	System.out.println(size+" "+size);
+	System.out.println(size/2+" "+(size/2));
+
+    } //main
+
+
+
+
+
+
+
+} //class

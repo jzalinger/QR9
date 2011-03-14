@@ -27,7 +27,7 @@ public class Server {
 		//accept new clients:
 		Socket s=serverSocket.accept();
 		synchronized(lock) { //neccessary?
-		    AccountExec exec=new AccountExec(s,++lastID)
+		    AccountExec exec=new AccountExec(s,++lastID);
 		    game.addPlayer(exec.getPlayer());
 		    accounts.add(exec);
 		    (new Thread(exec)).start();

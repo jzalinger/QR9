@@ -1,0 +1,21 @@
+// custom keyboard listener to watch for arrow keys and then dispath actions
+//  to server
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+public class MoveListener implements KeyboardListener {
+
+
+
+
+
+
+
+
+
+
+
+} //class

@@ -1,0 +1,33 @@
+// client side program for connecting to server
+
+import java.net.*;
+import java.io.*;
+import java.util.*;
+
+
+public class Client implements Runnable {
+
+
+    private static Socket socket;
+    private static PrintStream out;
+
+
+    public static void main(String[] args) {
+	socket=new Socket("rigel.cs.amherst.edu",2346);
+	out.new PrintStream(s.getOutputStream());
+
+	(new Thread(new Client()).start());
+
+	Scanner sc=new Scanner(System.in);
+	while(sc.hasNextLine()) {
+	    out.println(sc.nextLine());
+	    sc.flush();
+	}
+    } //main
+
+
+
+
+
+
+} //class

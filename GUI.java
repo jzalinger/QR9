@@ -39,7 +39,7 @@ public class GUI extends Output {
 	private WFrame() {
 	    super("Wasteland");
 	    JPanel p=new JPanel(new FlowLayout());
-	    setPreferredSize(new Dimension(500,600));
+	    setPreferredSize(new Dimension(650,600));
 	    panel=new MainPanel(500,600);
 	    p.add(panel);
 	    setContentPane(p);

@@ -1,0 +1,30 @@
+// second tier graphics class
+
+import javax.swing.*;
+import java.awt.*;
+
+
+public class MainPanel extends JPanel {
+
+    private Canvas canvas;
+    private JLabel alertLabel;
+
+
+    public MainPanel(int w,int h) {
+	super();
+	setLayout(new BoxLayout(this,BoxLayout,Y_AXIS));
+	setBorder(new LineBorder(2,Color.Black));
+	setPreferredSize(new Dimension(w,h));
+
+	canvas=new Canvas(Math.max(w,h),Math.max(w,h));
+	add(canvas);
+	add(new Rectangle(w,2,Color.Black));
+	alertLabel=new JLabel("ini");
+	add(alertLabel);
+    } //constructor
+
+
+
+
+
+} //class

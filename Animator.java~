@@ -1,0 +1,18 @@
+// thread for updating UI in real time
+
+
+public class Animator implements Runnable {
+
+    private static final int delay=50; //in ms
+    private Output parent;
+    private boolean running;
+
+
+    public Animator(Output o) {
+	parent=o;
+    } //constructor
+
+
+
+
+} //class

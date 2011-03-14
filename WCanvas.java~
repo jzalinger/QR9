@@ -9,6 +9,7 @@ public class WCanvas extends JComponent {
     private int w;
     private int h;
     private ClientData data;
+    private static final int POINT_SIZE = 5;
 
 
     public WCanvas(int w,int h) {
@@ -29,8 +30,18 @@ public class WCanvas extends JComponent {
 
 
     public void paintComponent(Graphics g) {
-	/* ** */g.setColor(Color.BLACK);
-	/* ** */g.drawString("("+data.getXCoord()+", "+data.getYCoord()+")",50,50);
+	for (int y = 0; y < GameData.CLIENT_VISION_DIAMETER; y++) {
+	    for (int x = 0; x < GameData.CLIENT_VISION_DIAMETER; x++) {
+		if (data.getPoint(x, y) == 'p') {
+		    g.setColor(Color.GRAY);
+		} else if (data.getPoint(x, y) == 'b') {
+		    g.setColor(Color.BLACK);
+		} else {
+		    g.setColor(Color.RED);
+		}
+		g.fillRect(x*POINT_SIZE, y*POINT_SIZE, POINT_SIZE, POINT_SIZE);
+	    }
+	}
     } //paintComponent
 
 

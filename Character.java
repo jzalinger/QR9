@@ -4,7 +4,7 @@
 public abstract class Character {
 
 
-    private static final int maxCooldown=3; //what cooldown is after acting
+    private static final int maxCooldown=1; //what cooldown is after acting
     private int cooldown; //turns until action can be taken
     private GameActionType queuedAction;
     private static final int mapSize=3; //mapTiles x mapTiles they inhabit

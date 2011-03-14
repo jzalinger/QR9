@@ -115,6 +115,12 @@ public class GridManager {
 	return (p.isPathable() && !p.isOccupied());
     } //canMoveTo
 
+    public boolean canMoveTo(Point center,int size) {
+	for(Point p:getRegion(center,size))
+	    if(!canMoveTo(p)) return false;
+	return true;
+    } //canMoveTo2
+
     private Point getUpperLeft(Point center, int size) {
 	return getRelativePoint(center, -size, -size);
     } //getUpperLeft

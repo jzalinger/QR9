@@ -1,0 +1,22 @@
+// instance of some structure in game
+
+
+public class Structure {
+
+    private StructureType type;
+    private Coord location;
+    //--->health, etc
+
+
+    public Structure(StructureType _type,Coord c) {
+	type=_type;
+	location=c;
+    } //constructor
+
+
+
+
+
+
+
+} //class
