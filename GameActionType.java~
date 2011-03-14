@@ -1,0 +1,28 @@
+// all distinct actions a player can perform
+
+
+public enum GameActionType {
+
+
+    MoveUp("MoveUp"),MoveDown("MoveDown"),MoveRight("MoveRight"),MoveLeft("MoveLeft");
+
+
+
+    private String name;
+
+
+    private GameActionType(String s) {
+	name=s;
+    } //constructor
+
+
+
+    public static GameActionType parse(String s) {
+	for(GameActionType type:values())
+	    if(type.name.equals(s)) return type;
+	return null;
+    } //parse
+
+
+
+} //enum

@@ -1,0 +1,32 @@
+// server for testing what servers are
+
+import java.util.*;
+
+
+public class Server {
+
+
+    private static Object lock; //for synchronization
+    private static HashMap<Socket,AccountExec> accounts;
+    // *an "account" is a server-side thread for managing a connected client
+
+
+    public static void main(String[] args) {
+	lock=new Object();
+	account=new HashMap<Socket,AccountExec>();
+	ServerSocket serverSocket=new ServerSocket(2346);
+
+	while(true) {
+	    //accept new clients:
+	    Socket s=serverSocket.accept();
+	    AccountExec exec=new AccountExec(s,accounts.size());
+	    accounts.put(s,exec);
+	    (new Thread(exec)).start();
+	}
+    } //main
+
+
+
+
+
+} //class

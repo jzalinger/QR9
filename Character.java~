@@ -1,0 +1,37 @@
+// superlcass for anyhting that can take actions (PCs, NPCs)
+
+
+public class Character {
+
+
+    private static final int maxCooldown; //what cooldown is after acting
+    private int cooldown; //turns until action can be taken
+    private GameActionType queuedAction;
+    private static final mapSize=3; //mapTiles x mapTiles they inhabit
+
+
+
+    public void decCooldown() {
+	if(cooldown>0) cooldown--;
+    } //decCooldown
+
+
+    public boolean canAct() {
+	return cooldown<=0 && queuedAction!=null;
+    } //canAct
+
+
+    public GameAction dequeueAction() {
+	GameAction a=new GameAction(queuedAction,this);
+	queuedAction=null;
+	cooldown=maxCooldown;
+	return a;
+    } //dequeueAction
+
+
+    public void newAction(GameActionType t) {
+	if(queuedAction==null) queuedAction=t;
+    } //newAction
+
+
+} //class

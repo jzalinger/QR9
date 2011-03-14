@@ -1,0 +1,10 @@
+
+
+public class GridManager {
+
+    private Region region;
+
+    public Point getRelativePoint(Point p, int dx, int dy) {
+	return region.getPoint(p.getX() + dx, p.getY() + dy);
+    } //getRelativePoint
+}

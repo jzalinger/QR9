@@ -1,0 +1,46 @@
+// client side version of game data; only stuff that's relevant to client's PC
+
+import java.util.Scanner;
+
+
+public class ClientData {
+
+
+    // ********* this is a WAY simplified version ************
+
+    private int xCoord;
+    private int yCoord; //coords of character's middle
+
+
+    public ClientData() {
+	xCoord=-1;
+	yCoord=-1;
+    } //empty constructor
+
+    public ClientData(String encoding) {
+	// ***** WAYYYY simplified *********
+	try {
+	    Scanner sc=new Scanner(encoding);
+	    xCoord=sc.nextInt();
+	    yCoord=sc.nextInt();
+	} catch(Exception e) {
+	    throw new BadFormatException(e.toString());
+	}
+    } //real constructor
+
+
+
+
+
+    ////////////// ACCESSORS /////////////////
+
+    public int getXCoord() {
+	return xCoord;
+    } //getXCoord
+
+    public int getYCoord() {
+	return yCoord;
+    } //getYCoord
+
+
+} //class
